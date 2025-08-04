@@ -52,5 +52,3 @@ func DialogFilesGet(w http.ResponseWriter, r *http.Request) {
 
 	defer zipWriter.Close()
 }
-
-// Les twin flames (flammes jumelles)
