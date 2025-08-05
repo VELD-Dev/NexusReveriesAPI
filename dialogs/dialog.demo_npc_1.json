@@ -1,0 +1,17 @@
+{
+  "dialogId": "dialog_npc_demo_0",
+  "npcId": "npc_demo_0",
+  "messages": [
+    {
+      "characterId": "npc_demo",
+      "messageParts": [
+        "Hey {playername} ! ",
+        "Guard are looking for you, apparently you've been choosen for refilling the Fragment of Nexus of the village, ",
+        "get ready !"
+      ],
+      "fakeChoices": [
+        "On my way !"
+      ]
+    }
+  ]
+}
