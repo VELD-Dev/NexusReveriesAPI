@@ -1,0 +1,25 @@
+{
+  "LocaleId": "jp_jp",
+  "Groups": {
+    "UI": {
+      "UI_QuitButton": "UI_QuitButton",
+      "UI_SettingsButton": "UI_SettingsButton",
+      "UI_LoadGameButton": "UI_LoadGameButton",
+      "UI_NewGameButton": "UI_NewGameButton",
+      "UI_SaveCancelLoad": "UI_SaveCancelLoad",
+      "UI_SaveText": "UI_SaveText",
+      "UI_LoadingSavesText": "UI_LoadingSavesText",
+      "UI_SaveNameLabel": "UI_SaveNameLabel",
+      "UI_SaveDetailsLabel": "UI_SaveDetailsLabel",
+      "UI_LoadText": "UI_LoadText",
+      "UI_SaveCreationMessage": "UI_SaveCreationMessage",
+      "UI_SaveListEmptyTitle": "UI_SaveListEmptyTitle",
+      "UI_SaveListEmptyDetails": "UI_SaveListEmptyDetails",
+      "UI_SaveLoadedSuccess": "UI_SaveLoadedSuccess"
+    },
+    "Place": {
+      "Place_CapitalOfDyssira_Barn": "Place_CapitalOfDyssira_Barn",
+      "Place_none": "Place_none"
+    }
+  }
+}

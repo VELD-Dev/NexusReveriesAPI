@@ -1,0 +1,26 @@
+{
+  "LocaleId": "en_gb",
+  "Groups": {
+    "UI": {
+      "UI_QuitButton": "Quit",
+      "UI_SettingsButton": "Settings",
+      "UI_LoadGameButton": "Load Game",
+      "UI_NewGameButton": "New Game",
+      "UI_SaveCancelLoad": "Cancel",
+      "UI_SaveText": "Save",
+      "UI_LoadingSavesText": "Loading",
+      "UI_CreateSaveText": "Create new save",
+      "UI_SaveNameLabel": "Save {0} - {1}",
+      "UI_SaveDetailsLabel": "{0} items - Level {1} - {2} siras\n{3} - {4}",
+      "UI_LoadText": "Load",
+      "UI_SaveCreationMessage": "Save created successfully.",
+      "UI_SaveListEmptyTitle": "No save found.",
+      "UI_SaveListEmptyDetails": "Create a new save by reaching the Save menu, or by making a new game!",
+      "UI_SaveLoadedSuccess": "Save loaded successfully."
+    },
+    "Place": {
+      "Place_CapitalOfDyssira_Barn": "Capital of Dyssira > Barn",
+      "Place_none": "Place_none"
+    }
+  }
+}

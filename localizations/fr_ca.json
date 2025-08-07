@@ -1,0 +1,25 @@
+{
+  "LocaleId": "fr_ca",
+  "Groups": {
+    "UI": {
+      "UI_QuitButton": "Quitter",
+      "UI_SettingsButton": "Paramètres",
+      "UI_LoadGameButton": "Charger",
+      "UI_NewGameButton": "Nouvelle Sauvegarde",
+      "UI_SaveCancelLoad": "Annuler",
+      "UI_SaveText": "Sauvegarder",
+      "UI_LoadingSavesText": "Chargement",
+      "UI_SaveNameLabel": "Sauvegarde {0} - {1}",
+      "UI_SaveDetailsLabel": "{0} objets - Niveau {1} - {2} siras\n{3} - {4}",
+      "UI_LoadText": "Charger",
+      "UI_SaveCreationMessage": "Sauvegarde créée avec succès.",
+      "UI_SaveListEmptyTitle": "UI_SaveListEmptyTitle",
+      "UI_SaveListEmptyDetails": "UI_SaveListEmptyDetails",
+      "UI_SaveLoadedSuccess": "UI_SaveLoadedSuccess"
+    },
+    "Place": {
+      "Place_CapitalOfDyssira_Barn": "Capitale de Dyssira > Étable",
+      "Place_none": "Place_none"
+    }
+  }
+}
