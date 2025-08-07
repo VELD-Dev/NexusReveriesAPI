@@ -10,16 +10,16 @@
       "UI_SaveText": "Sauvegarder",
       "UI_LoadingSavesText": "Chargement",
       "UI_SaveNameLabel": "Sauvegarde {0} - {1}",
-      "UI_SaveDetailsLabel": "{0} items - Niveau {1} - {2} siras\n{3} - {4}",
+      "UI_SaveDetailsLabel": "{0} objets - Niveau {1} - {2} siras\n{3} - {4}",
       "UI_LoadText": "Charger",
       "UI_SaveCreationMessage": "Sauvegarde créée avec succès.",
-      "UI_SaveListEmptyTitle": "UI_SaveListEmptyTitle",
-      "UI_SaveListEmptyDetails": "UI_SaveListEmptyDetails",
-      "UI_SaveLoadedSuccess": "UI_SaveLoadedSuccess"
+      "UI_SaveListEmptyTitle": "Aucune donnée de sauvegarde",
+      "UI_SaveListEmptyDetails": "Créez une nouvelle sauvegarde en accédant au menu \"sauvegarder\" ou en créant une nouvelle partie !",
+      "UI_SaveLoadedSuccess": "Sauvegarde chargée avec succès"
     },
     "Place": {
       "Place_CapitalOfDyssira_Barn": "Capitale de Dyssira > Étable",
-      "Place_none": "Place_none"
+      "Place_none": "Endroit inconnu"
     }
   }
 }
