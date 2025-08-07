@@ -1,13 +1,10 @@
 package nexrev_routes
 
 import (
-	"archive/zip"
 	"encoding/json"
-	"io/fs"
+	"fmt"
 	"net/http"
 	nexrev_utils "nexusreveries/cdn/utils"
-	"os"
-	"slices"
 )
 
 func DialogFilesGet(w http.ResponseWriter, r *http.Request) {
@@ -31,24 +28,16 @@ func DialogFilesGet(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	filesFs, _ := os.ReadDir(dialogs_dir)
-
-	zipWriter := zip.NewWriter(w)
-
 	for i := range missingFiles {
-		missingFile := missingFiles[i]
-		if !slices.ContainsFunc(filesFs, func(e fs.DirEntry) bool { return missingFile == e.Name() }) {
-			continue
-		}
-
-		originalFile, _ := os.ReadFile(dialogs_dir + "/" + missingFile)
-		zippedFile, _ := zipWriter.Create(missingFile)
-		_, err = zippedFile.Write(originalFile)
-
-		if err != nil {
-			println(err.Error())
-		}
+		missingFiles[i] = dialogs_dir + "/" + missingFiles[i]
 	}
 
-	defer zipWriter.Close()
+	zipBuf, err := nexrev_utils.ZipFiles(missingFiles)
+	if err != nil {
+		nexrev_utils.ErrorHTTP(&w, http.StatusInternalServerError, err.Error())
+		return
+	}
+
+	w.Header().Add("Content-Length", fmt.Sprint(len(zipBuf)))
+	w.Write(zipBuf)
 }
