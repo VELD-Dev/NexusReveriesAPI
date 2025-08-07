@@ -4,6 +4,7 @@ import (
 	"archive/zip"
 	"bytes"
 	"crypto"
+	"encoding/hex"
 	"net/http"
 	"os"
 	"path"
@@ -48,7 +49,7 @@ func GetHashesForFiles(directory string, fileType string) (map[string]string, er
 			return nil, err
 		}
 
-		hashset[file] = string(hash.Sum(nil))
+		hashset[file] = hex.EncodeToString(hash.Sum(nil))
 	}
 
 	return hashset, nil

@@ -19,6 +19,8 @@ func initRouter() {
 
 	router.HandleFunc("/dialog-hashes", nexrev_routes.DialogHashesGet)
 	router.HandleFunc("/dialog-files", nexrev_routes.DialogFilesGet)
+	router.HandleFunc("/localizations-hashes", nexrev_routes.GetLocalizationsHashes)
+	router.HandleFunc("/localizations-files", nexrev_routes.GetLocalizationsFiles)
 
 	http.ListenAndServe(":2772", router)
 }
