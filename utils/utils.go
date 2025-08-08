@@ -11,13 +11,14 @@ import (
 	"strings"
 )
 
-// ErrorHTTP returns error on the responsewriter and calls panic(message)
-func ErrorHTTP(w *http.ResponseWriter, code int, message string) {
-	(*w).WriteHeader(code)
-	(*w).Header().Set("Content-Type", "text/plain")
-	(*w).Header().Set("X-Content-Type-Options", "nosniff")
-	(*w).Write([]byte(message))
-	panic(message)
+// ErrorHTTP writes an error message to the response writer.
+// It's better to avoid using panic for control flow in HTTP handlers.
+func ErrorHTTP(w http.ResponseWriter, code int, message string) {
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	w.Header().Set("X-Content-Type-Options", "nosniff")
+	w.WriteHeader(code)
+	w.Write([]byte(message))
+	println(message)
 }
 
 func GetHashesForFiles(directory string, fileType string) (map[string]string, error) {
@@ -77,7 +78,10 @@ func ZipFiles(filepaths []string) ([]byte, error) {
 		}
 	}
 
-	defer zipFile.Close()
+	err := zipFile.Close()
+	if err != nil {
+		return nil, err
+	}
 
 	return zipBuffer.Bytes(), nil
 }

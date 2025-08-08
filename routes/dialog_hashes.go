@@ -14,7 +14,7 @@ func DialogHashesGet(w http.ResponseWriter, r *http.Request) {
 	hashes, err := nexrev_utils.GetHashesForFiles(dialogs_dir, ".json")
 
 	if err != nil {
-		nexrev_utils.ErrorHTTP(&w, http.StatusInternalServerError, err.Error())
+		nexrev_utils.ErrorHTTP(w, http.StatusInternalServerError, err.Error())
 		return
 	}
 
